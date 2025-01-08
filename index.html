@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crude Opperation</title>
+    <link rel="stylesheet" href="style.css">
+        <!-- Tailwind CSS CDN Link -->
+        <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cyan-50">
+    <div class="container mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <h2 class="text-4xl font-semibold text-center mb-4 uppercase">CRUD Operation with Firebase</h2>
+        <hr class="border-t-2 border-blue-300 mb-6">
+
+        <form id="myForm" class="space-y-4 ">
+            <div class="mx-8">
+                <label for="name" class="block text-lg font-medium text-gray-700">Name:</label>
+                <input type="text" id="name" placeholder="Enter Your Name" class="w-full p-3 mx-auto justify-center border border-blue-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div class="mx-8">
+                <label for="rollno" class="block text-lg font-medium text-gray-700">Roll No:</label>
+                <input type="text" id="rollno" placeholder="Enter Your Roll No" required class="w-full p-3 border  border-blue-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+            <div class="mx-8">
+                <label for="address" class="block text-lg font-medium text-gray-700">Address:</label>
+                <input type="text" id="address" placeholder="Enter Your Address" required class="w-full p-3 border  border-blue-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+        </form>
+
+        <div id="buttons" class="flex sm:justify-around gap-0.5 sm:flex-row flex-col justify-center mx-8 mt-5 ">
+            <button id="create" class="bg-cyan-500  text-white px-6 py-3 rounded-lg  mx-8 shadow-md hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-500 w-48 lg:w-60">Create</button>
+            <button id="read" class="bg-cyan-500  text-white px-6 py-3 rounded-lg mx-8 shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500  w-48  lg:w-60">Read</button>
+            <button id="update" class="bg-cyan-500  text-white px-6 py-3 rounded-lg mx-8 shadow-md hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-yellow-500  w-48  lg:w-60">Update</button>
+            <button id="delete" class="bg-cyan-500  text-white px-6 py-3 rounded-lg mx-8 shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500  w-48  lg:w-60">Delete</button>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>  
+    <script type="module" src="./fireBaseConfig.js"></script>
+</body>
+</html>
